@@ -1,0 +1,28 @@
+#Declaring a matrix
+mat1 = [ 1 2 3; 4 5 6; 7 8 9 ];
+disp(mat1)
+# N X M matrix of one
+n = 4;
+m = 5;
+
+# Matix containing one and zero
+one_matrix = ones(n,m);  # all one
+disp(one_matrix)
+zero_matrix = zeros(m,n);# all Zero
+disp(zero_matrix)
+
+# Plotting function ( Un comment to view the plot )
+t = [ 0:0.01:1.0 ];
+y1 = sin( 2*pi*4*t );
+y2 = cos( 2*pi*4*t );
+hold on;
+plot( t , y1 , 'r' );
+plot( t , y2 , 'b' );
+xlabel( 'time' );
+ylabel( 'value' );
+title( 'Testing plot function' );
+# Printing the plot in a image file
+print -dpng 'myplot.png';
+
+
+
