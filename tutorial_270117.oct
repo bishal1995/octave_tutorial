@@ -15,6 +15,7 @@ disp(zero_matrix)
 t = [ 0:0.01:1.0 ];
 y1 = sin( 2*pi*4*t );
 y2 = cos( 2*pi*4*t );
+clf;
 hold on;
 plot( t , y1 , 'r' );
 plot( t , y2 , 'b' );
@@ -24,5 +25,16 @@ title( 'Testing plot function' );
 # Printing the plot in a image file
 print -dpng 'myplot.png';
 
+# plotting multiple graphs of images
 
+
+
+# Plotting numbers
+clf;
+magic_matrix = magic(5000);
+imagesc( magic_matrix ) , colorbar , colormap ;
+title( 'Colormap' );
+ylabel( 'row' );
+xlabel( 'column' );
+print -dpng 'colormap.png';
 
