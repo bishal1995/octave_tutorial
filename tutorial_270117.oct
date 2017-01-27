@@ -37,4 +37,3 @@ title( 'Colormap' );
 ylabel( 'row' );
 xlabel( 'column' );
 print -dpng 'colormap.png';
-

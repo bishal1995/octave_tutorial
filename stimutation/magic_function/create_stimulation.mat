@@ -1,0 +1,19 @@
+# Loop for creating files
+for t = [10:500]
+      clf;
+      magic_matrix = magic( t );
+      imagesc( magic_matrix ) ; colorbar ; colormap ;
+      title( 'Colormap' );
+      ylabel( 'row' );
+      xlabel( 'column' );
+      filename=sprintf('output/%05d.png',t);
+      print(filename);
+end
+
+#{
+Installing mencoder
+sudo apt-get install mencoder
+Cteating the video - 
+mencoder mf://output/*.png -mf w=640:h=480:fps=25:type=png -ovc lavc -lavcopts vcodec=mpeg4:mbd=2:trell -oac copy -o output.avi
+}#
+      
